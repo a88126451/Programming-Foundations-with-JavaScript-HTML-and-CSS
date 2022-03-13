@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Paint Canvas </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Paint Your Own Picture</h1>
+
+<h3>
+  Set Width
+  <input type="text" onchange=setWidth(this.value)>
+  Set Height
+  <input type="text" onchange=setHeight(this.value)>
+</h3>
+
+<canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX, event.offsetY)" onmouseup="endPaint()">
+</canvas>
+
+<p>
+  Brush Color
+  <input type="color" value="#000" onchange="setColor(this.value)">
+  Brush Size
+  <input type="Range" id="sizeInput" min="1" max="50" value="50" oninput="resizeBrush(this.value)">
+  <output id="sizeOutput">50</output>
+</p>
+<p>
+  <input type="button" id="clear" value="Clear Canvas" onclick="clearCanvas()">
+</p>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
