@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" >
+</script>
+
+<head>
+<title>HTML CSS JavaScript Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+  
+
+  <!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-dark-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>HTML CSS <br>JavaScript<br>Portfolio</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a> 
+    <a href="#todolist" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">To Do List</a> 
+    <a href="#paintcanvas" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Paint Canvas</a> 
+    <a href="#greenscreen" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Green Screen</a> 
+    <a href="#filterfun" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Filter Fun</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>HTML CSS JavaScript Portfolio</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Programming Foundations with JavaScript, HTML and CSS</b></h1>
+    <h1 class="w3-xxxlarge w3-text-black"><b>Introduction.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <h3>Course Purpose</h3>
+    <li>Think critically about how to solve a problem using programming</li>
+     <li>Write JavaScript programs using functions, for loops, and conditional statements</li>
+     <li>Use HTML to construct a web page with paragraphs, divs, images, links, and lists</li>
+     <li>Add styles to a web page with CSS IDs and classes</li>
+     <li>Make a web page interactive with JavaScript commands like alert, onClick, onChange, adding input features like an image canvas, button, and slider</li>
+    
+    <h3>Syllabus</h3>
+    <li>WEEK 1 Designing a Web Page with HTML and CSS</li>
+    <li>WEEK 2 Algorithms and Programming Concepts</li>
+    <li>WEEK 3 JavaScript for Web Pages</li>
+    <li>WEEK 4 MiniProject: Image Filters on the Web</li>
+   
+  </div>
+
+
+  <!-- To Do List -->
+  <div class="w3-container" id="todolist" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>To Do List.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+     <!-- To Do List Code-->
+    <input type="button" id="addButton" value="Add" onclick="addTask()" />  
+<input type="text" id="input" placeholder="Enter task ..." />  
+<hr>
+    
+<ul id="tasks">
+  <li>
+    <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2714;" />
+    <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2718;" />
+    make todo list
+  </li>  
+</ul>
+<hr>
+
+<div id ="divabout">
+
+</div>
+<input type="button" value="About" onclick="doAbout()">    
+
+<input type="button" value="Clear" onclick="clearAbout()">
+  </div>
+  
+  <!-- Paint Canvas -->
+  <div class="w3-container" id="paintcanvas" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Paint Canvas.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <!-- Paint Canvas Code -->
+<p>
+  Set Width
+  <input type="text" onchange=setWidth(this.value)>
+  Set Height
+  <input type="text" onchange=setHeight(this.value)>
+</p>
+
+<canvas id="canvas1" onmousedown="startPaint()" onmousemove="doPaint(event.offsetX, event.offsetY)" onmouseup="endPaint()">
+</canvas>
+
+<p>
+  Brush Color
+  <input type="color" value="#000" onchange="setColor(this.value)">
+  Brush Size
+  <input type="Range" id="sizeInput" min="1" max="50" value="50" oninput="resizeBrush(this.value)">
+  <output id="sizeOutput">50</output>
+</p>
+<p>
+  <input type="button" id="clear" value="Clear Canvas" onclick="clearCanvas()">
+</p>
+  </div>
+
+  
+  <!-- Green Screen -->
+  <div class="w3-container" id="greenscreen" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Green Screen.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <!-- Green Screen Code -->
+<canvas id="can1">
+</canvas>
+
+<canvas id="can2">
+</canvas>
+
+<p>
+  Foreground
+  <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()">
+</p>
+
+<p>
+  Background
+  <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()">
+</p>
+
+<p>
+  <input type="button" value="Create Composite" onclick="greenScreen()">
+  <input type="button" value="Clear Canvas" onclick="clearCanvas()">
+</p>
+
+  </div>
+
+  <!-- Filter Fun -->
+  <div class="w3-container" id="filterfun" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-black"><b>Filter Fun.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+    <!-- Filter Fun Code -->
+    <canvas id="can3">
+</canvas>
+
+<h2>Load Image</h2>
+<input type="file" multiple="false" accept="image/*" id="imgfile" onchange="loadImage()">
+<h2>Chosse Filter</h2>
+<input type="button" value="Blur" onclick="doblur()">
+<input type="button" value="Grayscale" onclick="grayscale()">
+<input type="button" value="Red" onclick="red()">
+<input type="button" value="Rainbow" onclick="rainbow()">
+
+
+<h2>Reset Image</h2>
+<input type="button" value="Reset" onclick="reset()">
+  </div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
