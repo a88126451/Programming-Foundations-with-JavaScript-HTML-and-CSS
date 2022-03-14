@@ -1,0 +1,23 @@
+h1 {
+  color: #343a40;
+  font-family: Lucida Console;
+  background-color: white;
+}
+
+p {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 140%;
+
+}
+
+body {
+  background-color: #ffddd2;
+}
+
+canvas {
+  border: 2pt solid dimgray;
+  background-color: white;
+  height: 200px;
+
+}
