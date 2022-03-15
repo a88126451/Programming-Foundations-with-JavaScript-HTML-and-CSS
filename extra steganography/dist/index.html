@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Steganography</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" >
+</script>
+
+<h1>Steganography</h1>
+<canvas id="can4">
+</canvas>
+<canvas id="can5">
+</canvas>
+<h2>Load Image</h2>
+<p>Start Image
+  <input type="file" multiple="false" accept="image/*" id="startfile" onchange="loadStartImage()"></p>
+<p>Hide Image
+  <input type="file" multiple="false" accept="image/*" id="hidefile" onchange="loadHideImage()"></p>
+<h2>Result</h2>
+<p>
+  <input type="button" value="Create Composite" onclick="steganography()">
+  <input type="button" value="Clear Canvas" onclick="clearCanvas()">
+</p>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
