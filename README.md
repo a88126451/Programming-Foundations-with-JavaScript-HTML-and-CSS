@@ -6,7 +6,7 @@ This is the first course of the Specialization, [Link to the course](https://www
 
 # MiniProject in the Course
 
-[Portfolio Link](https://codepen.io/a88126451/pen/mdpyPKb)
+[MiniProject Link](https://codepen.io/a88126451/pen/mdpyPKb)
 - **To Do List** : User will be able to add items to, check the items off and remove the items.
 - **Paint Canvas** : User will be able to draw pictures, resize the canvas and clear the canvas.
 - **Green Screen** : User will be able to composite two images by green screen algorithm.
